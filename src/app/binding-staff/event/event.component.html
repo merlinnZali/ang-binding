@@ -1,0 +1,28 @@
+<p>{{title}}</p>
+
+<button on-click="clickMe()">click me</button>
+<button (click)="handler($event)" name="event-ref-binding">click me</button>
+
+<br>
+-------------------------
+<br>
+<span>Template ref variable</span>
+<h3>{{user.value}}</h3>
+<input #user type="text" name="userName" value="Merlino">
+<button (click)="templateRef(user)">click me</button>
+<br>
+-------------------------
+<br>
+<span>Sibling Template ref variable</span>
+<h3>{{siblingUser.title}}</h3>
+<app-sibling-template-ref #siblingUser></app-sibling-template-ref>
+<br>
+-------------------------
+<br>
+FirstName: <input type="text" [value]="firstName" 
+(input)="handlerInput($event)">
+Label: <span>{{firstName}}</span>
+<br>
+LastName: <input type="text" [value]="lastName" 
+[(ngModel)]="lastName">
+Label: <span>{{lastName}}</span>

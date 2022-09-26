@@ -1,0 +1,36 @@
+{{title}}
+
+<br><br>
+<input type="text" [value]="property">
+
+<br><br>
+<div class="classColor classStyle classSize">Class Binding</div>
+<div [class]="classOne">Class Binding1</div>
+<div [class]="'classColor classStyle'">Class Binding1</div>
+<div [class.classColor]="classColor">Class Binding2</div>
+<div [ngClass]="objectClass">Class Binding3</div>
+
+<br>
+<div style="font-size: 20px;">Style Binding</div>
+<div [style.font-size]="'20px'">Style Binding1</div>
+<div [style.font-size]="fontSize">Style Binding2</div>
+<div [style.font-size.px]="fontSizeNumber">Style Binding3</div>
+<div [style.color]="isTrue?'red':'green'">Style Binding4</div>
+<div [ngStyle]="objectStyle">Style Binding5</div>
+
+
+<input type="text" [class.bg-warning]="warningField()" value="I am a warning field">
+
+<br>
+
+
+<div class="dropdown my-5">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="true">
+      Dropdown button
+    </button>
+    <ul class="dropdown-menu show">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+</div>
